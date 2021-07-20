@@ -1,5 +1,5 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
         "baseResourceName": {
@@ -309,6 +309,7 @@
             "apiVersion": "2015-05-01",
             "name": "[variables('botAppInsightsName')]",
             "location": "[parameters('location')]",
+            "kind": "web",
             "tags": {
                 "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/sites/', variables('botName'))]": "Resource"
             },
@@ -460,6 +461,7 @@
                     "type": "sourcecontrols",
                     "apiVersion": "2015-08-01",
                     "name": "web",
+                    "location": "[parameters('location')]",
                     "dependsOn": [
                         "[resourceId('Microsoft.Web/sites', variables('functionAppName'))]"
                     ],

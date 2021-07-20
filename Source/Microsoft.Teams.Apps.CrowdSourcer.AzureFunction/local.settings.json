@@ -7,6 +7,7 @@
     "QnAMakerApiUrl": "",
     "StorageConnectionString": "",
     "SearchServiceName": "",
-    "SearchServiceKey": ""
+    "SearchServiceKey": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet"
   }
 }
